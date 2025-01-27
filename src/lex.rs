@@ -62,6 +62,7 @@ pub enum TokenType {
     True,
     False,
     Return,
+    Null,
     StringTy,
     NumberTy,
     Map,
@@ -244,6 +245,7 @@ impl<'a> Iterator for Lexer<'a> {
                         "array" => TokenType::Array,
                         "string" => TokenType::StringTy,
                         "number" => TokenType::NumberTy,
+                        "null" => TokenType::Null,
                         _ => TokenType::Ident,
                     };
 
