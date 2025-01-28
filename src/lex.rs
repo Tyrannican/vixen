@@ -71,8 +71,8 @@ pub enum TokenType {
 
 #[derive(Debug, Copy, Clone, PartialEq)]
 pub struct Token<'a> {
-    ty: TokenType,
-    value: &'a str,
+    pub ty: TokenType,
+    pub value: &'a str,
 }
 
 impl<'a> std::fmt::Display for Token<'a> {
